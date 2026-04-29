@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>东莞市休闲娱乐旅行有限公司 | 企业宣传</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f8f9fc;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #1e2a3e;
+            line-height: 1.5;
+            padding-bottom: 60px;
+        }
+
+        /* 主容器 */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            overflow-x: hidden;
+        }
+
+        /* 顶部企业宣传图区 (视觉头图) */
+        .hero {
+            background: linear-gradient(135deg, #0b2b3b 0%, #1b4f6e 100%);
+            padding: 48px 24px 40px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        .hero h1 {
+            font-size: 2.4rem;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .hero .sub {
+            font-size: 0.9rem;
+            opacity: 0.85;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            display: inline-block;
+            padding-top: 8px;
+            margin-top: 12px;
+        }
+        .hero-deco {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="white"/></svg>') no-repeat bottom;
+            background-size: cover;
+        }
+
+        /* 通用卡片样式 */
+        .card {
+            background: white;
+            margin: 20px 16px;
+            padding: 24px 20px;
+            border-radius: 24px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.03), 0 2px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            letter-spacing: -0.3px;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 48px;
+            height: 3px;
+            background: #1b7b4e;
+            border-radius: 4px;
+        }
+        .en-sub {
+            font-size: 0.7rem;
+            color: #7f8c8d;
+            letter-spacing: 1px;
+            margin-top: 4px;
+            font-weight: normal;
+        }
+
+        /* 关于我们区域 */
+        .about-text {
+            font-size: 1rem;
+            color: #2c3e50;
+            line-height: 1.65;
+            margin-top: 10px;
+            text-align: justify;
+        }
+
+        /* 两列布局 (使命/愿景) */
+        .row-2col {
+            display: flex;
+            gap: 16px;
+            margin-top: 8px;
+            flex-wrap: wrap;
+        }
+        .col-item {
+            flex: 1;
+            background: #f3f6fc;
+            border-radius: 20px;
+            padding: 20px 12px;
+            text-align: center;
+        }
+        .col-item h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1b4f6e;
+        }
+        .col-item p {
+            font-size: 0.85rem;
+            color: #2c3e50;
+            line-height: 1.45;
+        }
+
+        /* 核心产品 & 发展历程 列表 */
+        .list-styled {
+            list-style: none;
+            margin-top: 12px;
+        }
+        .list-styled li {
+            padding: 12px 0;
+            border-bottom: 1px solid #edf2f7;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.95rem;
+        }
+        .list-styled li:before {
+            content: "▹";
+            color: #1b7b4e;
+            font-weight: bold;
+        }
+        .badge-year {
+            background: #eef2f9;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #1b4f6e;
+            min-width: 70px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        /* 地址+导航卡片 */
+        .address-block {
+            background: #f0f5ea;
+            border-radius: 24px;
+            padding: 20px;
+            margin-top: 8px;
+        }
+        .address-line {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 18px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .nav-btn {
+            background: #1b4f6e;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 40px;
+            font-size: 1rem;
+            font-weight: 600;
+            width: 100%;
+            text-align: center;
+            display: inline-block;
+            cursor: pointer;
+            transition: 0.2s;
+            text-decoration: none;
+        }
+        .nav-btn:active {
+            background: #0e3a52;
+            transform: scale(0.97);
+        }
+
+        /* 底部装饰 */
+        .footer-note {
+            text-align: center;
+            font-size: 0.7rem;
+            color: #95a5a6;
+            padding: 20px 16px 30px;
+        }
+
+        /* GIF 适配 & 间距 */
+        .spacer {
+            height: 4px;
+        }
+        img, svg {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- 头部宣传区 -->
+    <div class="hero">
+        <h1>企业宣传</h1>
+        <div style="font-size: 1.8rem; font-weight: 500; margin: 12px 0 4px;">东莞市休闲娱乐旅行有限公司</div>
+        <div class="sub">创新 · 互联 · 卓越服务</div>
+        <div class="hero-deco"></div>
+    </div>
+
+    <!-- 关于我们 -->
+    <div class="card">
+        <div class="section-title">
+            关于我们
+            <div class="en-sub">GUANYUWOMEN</div>
+        </div>
+        <div class="about-text">
+            尊敬的各位先生女士们：<br><br>
+            本公司是一家创新型互联网科技公司，我们致力于发展改进移动端信息互联的方式。在新的时代，不断努力奋勇向前，坚持技术创新，探索新的领域。只有提升自身的硬实力才能在时代浪潮中脱颖而出，实现自我价值提升。
+        </div>
+    </div>
+
+    <!-- 企业使命 & 企业愿景 (两列) -->
+    <div class="card">
+        <div class="row-2col">
+            <div class="col-item">
+                <h3>企业使命</h3>
+                <p>致力打造一流的企业、一流的工程、一流的技术、一流的服务</p>
+            </div>
+            <div class="col-item">
+                <h3>企业愿景</h3>
+                <p>成为移动互联时代智慧文旅领跑者，为大众创造愉悦出行新体验</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 核心产品 -->
+    <div class="card">
+        <div class="section-title">
+            核心产品
+            <div class="en-sub">CORE PRODUCTS</div>
+        </div>
+        <ul class="list-styled">
+            <li>智游东莞 · 一站式旅行助手</li>
+            <li>企业数字会展云平台</li>
+            <li>休闲娱乐会员权益系统</li>
+            <li>智慧景区导览SaaS</li>
+        </ul>
+    </div>
+
+    <!-- 发展历程 -->
+    <div class="card">
+        <div class="section-title">
+            发展历程
+            <div class="en-sub">MILESTONES</div>
+        </div>
+        <ul class="list-styled" style="margin-top: 4px;">
+            <li><span class="badge-year">2020年</span> 公司成立，启动智慧互联项目</li>
+            <li><span class="badge-year">2022年</span> 首个移动端信息平台上线</li>
+            <li><span class="badge-year">2024年</span> 获得高新技术企业认证</li>
+            <li><span class="badge-year">2026年</span> 布局全国数字文旅生态</li>
+        </ul>
+    </div>
+
+    <!-- 地址 & 导航 -->
+    <div class="card">
+        <div class="section-title">
+            地址导航
+            <div class="en-sub">DIZHIDAOHANG</div>
+        </div>
+        <div class="address-block">
+            <div class="address-line">
+                📍 广东省东莞市南城区宏图路88号 · 休闲科创园B座3F
+            </div>
+            <div class="address-line">
+                📞 客服热线：400-882-6688 &nbsp;|&nbsp; 业务合作：0769-22888888
+            </div>
+            <button class="nav-btn" id="openMapBtn">🗺️ 点击查看地图导航</button>
+        </div>
+    </div>
+
+    <!-- 底部脚注（公司版权） -->
+    <div class="footer-note">
+        © 东莞市休闲娱乐旅行有限公司 版权所有 | 追求卓越 互联未来
+    </div>
+</div>
+
+<script>
+    // 模拟地图导航：点击跳转至高德/腾讯地图 (web版或者唤起手机地图)
+    const mapBtn = document.getElementById('openMapBtn');
+    if (mapBtn) {
+        mapBtn.addEventListener('click', function() {
+            // 地址坐标: 东莞南城宏图路88号 (示例坐标 23.0207,113.7515 附近)
+            const dest = encodeURIComponent('广东省东莞市南城区宏图路88号休闲科创园');
+            // 使用高德地图通用URI scheme 适配移动端
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            if (isMobile) {
+                // 唤起手机地图app (高德/苹果地图)
+                window.location.href = `iosamap://viewMap?destination=${dest}&sourceApplication=company`;
+                // 备用：若无法唤起，则跳转网页版
+                setTimeout(() => {
+                    window.location.href = `https://uri.amap.com/search?keyword=${dest}&callnative=1`;
+                }, 200);
+            } else {
+                // PC端显示高德网页版
+                window.open(`https://www.amap.com/search?query=${dest}`);
+            }
+        });
+    }
+</script>
+</body>
+</html>
